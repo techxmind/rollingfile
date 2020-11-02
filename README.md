@@ -4,9 +4,16 @@ Implements io.WriteCloser, automatically rotate file with both file size and fil
 ## USAGE
 ```
 file, err := rollingfile.New(
-    "current.data",     // active filename for writing
-    MaxSize(1024*1000), // rotate when current file size reach 1024*1000 bytes
-    MaxAge(3600),       // rotate when current file life time reach 3600 seconds
-    Suffix("-old"),     // suffix used in rotated filename : current-20060102150405-old.data
+    // active filename for writing
+    "current.data",
+
+    // rotate when current file size reach 1024*1000 bytes
+    rollingfile.MaxSize(1024*1000),
+
+    // rotate when current file life time reach 3600 seconds
+    rollingfile.MaxAge(3600),
+
+    // suffix used in rotated filename : current-20060102150405-old.data
+    rollingfile.Suffix("-old"),
 )
 ```
