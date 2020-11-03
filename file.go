@@ -10,8 +10,8 @@ import (
 
 var (
 	currentTime    = time.Now
-	defaultMaxAge  = 3600        //1 hour
-	defaultMaxSize = 1024_000_00 //100 Mb
+	defaultMaxAge  = 3600      //1 hour
+	defaultMaxSize = 104857600 //100 Mb
 	defaultSuffix  = ""
 )
 
